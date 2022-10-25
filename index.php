@@ -14,28 +14,41 @@ public $anno;
         $this->anno = $_anno;  
    }
 
-   
   public function stampaFilm() {
-        echo '<h2>'. 'Title:' .$this->titolo . '</h2>';
-        echo '<h3>'. 'Movie Director:'. $this->regista . '</h3>';
-        echo '<h3>'. 'Main Actor:' .$this->attore . '</h3>';
-        echo '<h4>'. 'Exit Date:' . $this->anno. '</h4>';
+ echo'<div class="container">';
+        echo '<h1>'. 'Titolo:' .$this->titolo . '</h1>';
+        echo '<p>'. 'Regista:'. $this->regista . '</p>';
+        echo '<p>'. 'Attore:' .$this->attore . '</p>';
+        echo '<p>'. 'Anno:' . $this->anno. '</p>';
         echo '<hr>';
+        
+'</div>';
 }
 
 }
 
  $filmOne = new Movie('Cast-away','Robert Zemeckis', 'Tom Hanks', '2001');
  $filmTwo = new Movie('Titanic', 'Leonardo DiCaprio','James Cameron', '1998');
+ $filmThree = new Movie('Forrest Gump' , 'Tom Hanks','Robert Zemeckis', '1994');
+
 
 
  $filmOne->stampaFilm();
- $filmTwo->stampaFilm()
-
-
-
-
-
-
+ $filmTwo->stampaFilm();
+ $filmThree->stampaFilm()
 
 ?>
+
+
+<style>
+.container{
+text-align: center;
+color: white;
+}
+
+body{
+background-color: black;
+}
+
+
+</style>
